@@ -1,0 +1,6 @@
+asgiref
+Django
+djangorestframework
+python-dotenv
+sqlparse
+psycopg2-binary

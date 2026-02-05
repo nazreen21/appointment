@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "51104184-2c13-4d1c-b0a7-ab16bd0517d9",
+		"name": "Appointment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32001392"
+	},
+	"item": [
+		{
+			"name": "appointment create api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_name\": \"Test Name\",\n    \"customer_email\": \"test@gmail.com\",\n    \"appointment_datetime\": \"2026-02-10T10:00:00Z\",\n    \"status\": \"scheduled\",\n    \"notes\": \"First consultation\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/v1/appointment/"
+			},
+			"response": []
+		},
+		{
+			"name": "appointments list view api",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/api/v1/appointment/"
+			},
+			"response": []
+		},
+		{
+			"name": "appointment detail view api",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/api/v1/appointment/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "appointment update api",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_name\": \"Test Name 2\",\n    \"customer_email\": \"test2@gmail.com\",\n    \"appointment_datetime\": \"2026-02-12T10:00:00Z\",\n    \"status\": \"completed\",\n    \"notes\": \"First consultation\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/v1/appointment/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "appointment partial update api",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"status\": \"cancelled\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/v1/appointment/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "appointment delete api",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/api/v1/appointment/3/"
+			},
+			"response": []
+		}
+	]
+}
